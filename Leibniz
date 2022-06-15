@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+  double pi,soma;
+  int cont,parcelas;
+  printf("calculando PI com a formula de Leibniz!!\n");
+  printf("---------------------------------------------\n");
+  printf("Digite o numero de parcelas da serie a ser calculadas: ");
+  scanf("%d", &parcelas);
+
+  soma = 0;
+  for (cont = 0; cont < parcelas; cont++) {
+    
+    if (cont % 2 == 0) {
+      soma = soma + 1.0/(2*cont + 1);
+    }
+    else {
+      soma = soma - 1.0/(2*cont + 1);
+    }
+  }
+
+  pi = 4*soma;
+  printf("Neste caso, o valor aproximado de pi eh (%.10lf)\n", pi);
+  
+  return(0);
+}
