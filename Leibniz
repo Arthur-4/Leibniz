@@ -24,4 +24,5 @@ int main() {
   printf("Neste caso, o valor aproximado de pi eh (%.10lf)\n", pi);
   
   return(0);
+  
 }
